@@ -29,8 +29,12 @@ Run the dependency-free checks with `node --test services.test.mjs`. They cover 
 
 ## Publishing
 
-GitHub Pages serves the `main` branch at the repository root. `.nojekyll` keeps the authored assets as static files. Upload only these twelve files: `index.html`, `styles.css`, `site.js`, `services.mjs`, `services.test.mjs`, `fieldwork.png`, `planning-lab.png`, `fieldnote.png`, `fieldnote-mobile.png`, `.nojekyll`, `.gitignore` and this README.
+GitHub Pages serves the `main` branch at the repository root. `.nojekyll` keeps the authored assets as static files. Upload only these fifteen reviewed files: `index.html`, `styles.css`, `site.js`, `services.mjs`, `services.test.mjs`, `fieldwork.png`, `planning-lab.png`, `fieldnote.png`, `fieldnote-mobile.png`, `.nojekyll`, `.gitignore`, `fieldwork-walkthrough.html`, `fieldwork-walkthrough.mp4`, `fieldwork-walkthrough-poster.jpg` and this README.
 
 No analytics, form submissions, application storage, external fonts or paid services are implemented. The brief's text remains in page memory until navigation/reload or reset; explicit copy writes to the user's clipboard and explicit download saves a local file. Clipboard failure exposes a manual-copy fallback. The host can log connection information; external links follow their destination's privacy practices. No private phone number, email address, home address or résumé is published. Client material must not be entered into examples; permission and an appropriate processing arrangement are required for real work.
 
 AI-assisted drafting and implementation are disclosed. No open-source license has been selected; public visibility alone does not grant reuse rights.
+
+## Two-minute Fieldwork walkthrough
+
+The [illustrated walkthrough](https://dhairyadevelops.github.io/fieldwork-walkthrough.html) uses genuine project screenshots, labeled explanatory graphics, synthetic narration and burned-in English captions. It has native playback controls and an expandable transcript. It does not autoplay or add analytics. The examples remain fictional; the video makes no production integration or client-results claim.

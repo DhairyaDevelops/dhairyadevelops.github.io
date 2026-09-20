@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Watch a two-minute illustrated walkthrough of Fieldwork: fictional delivery planning, capacity checks and submission review. An independent portfolio demonstration by Dhairya Sharma.">
+  <meta name="theme-color" content="#103a35">
+  <title>Fieldwork — A Two-Minute Illustrated Walkthrough</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #103a35;
+      --deep: #092d29;
+      --cream: #f5f2e8;
+      --mint: #c4edce;
+      --muted: #bad0c8;
+      --paper-ink: #173e36;
+      --paper-muted: #50685f;
+      --line: rgba(196, 237, 206, .22);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--cream);
+      background: var(--deep);
+      background-image: radial-gradient(ellipse at 90% 0%, #24564a 0%, transparent 45%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible, video:focus-visible {
+      outline: 3px solid var(--mint);
+      outline-offset: 5px;
+      border-radius: 4px;
+    }
+    .paper a:focus-visible, .paper summary:focus-visible { outline-color: #297d5d; }
+    .skip-link {
+      position: absolute;
+      z-index: 5;
+      top: 12px;
+      left: 16px;
+      padding: 10px 16px;
+      background: var(--mint);
+      color: var(--ink);
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .wrap { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .wordmark { font-size: 1.12rem; font-weight: 750; letter-spacing: -.04em; }
+    .wordmark span { color: var(--mint); }
+    .back-link { color: var(--muted); font-size: .88rem; }
+    .hero { padding: 58px 0 34px; max-width: 860px; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--mint);
+      font-size: .73rem;
+      font-weight: 650;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 5.1vw, 4rem);
+      font-weight: 550;
+      line-height: 1.08;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    .intro { margin: 20px 0 0; max-width: 650px; color: var(--muted); font-size: 1.08rem; }
+    .player {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #071e1b;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .16);
+    }
+    .player-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 15px 22px;
+      font-size: .8rem;
+      background: rgba(196, 237, 206, .06);
+      border-bottom: 1px solid var(--line);
+    }
+    .player-label { color: var(--muted); }
+    .runtime { color: var(--mint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #071e1b; }
+    .video-support {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      margin: 16px 2px 30px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+    .video-support p { margin: 0; }
+    .video-support nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .video-support a { color: var(--cream); }
+    .paper {
+      color-scheme: light;
+      background: var(--cream);
+      color: var(--paper-ink);
+      border-radius: 22px;
+      padding: 32px;
+    }
+    .section-label {
+      margin: 0 0 12px;
+      color: var(--paper-muted);
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .demo-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 22px;
+      border: 1px solid #ccd5c9;
+      border-radius: 13px;
+      min-width: 0;
+    }
+    .card-number { color: #527665; font-size: .76rem; letter-spacing: .08em; }
+    h2 { margin: 8px 0 0; font-size: 1.3rem; font-weight: 650; line-height: 1.3; letter-spacing: -.025em; }
+    .demo-card p { color: var(--paper-muted); margin: 10px 0 18px; font-size: .95rem; }
+    .demo-card a { margin-top: auto; font-size: .9rem; font-weight: 650; }
+    .disclosure {
+      margin: 22px 0 0;
+      padding: 18px 0 24px;
+      border-bottom: 1px solid #ccd5c9;
+      color: var(--paper-muted);
+      font-size: .86rem;
+    }
+    .disclosure strong { color: var(--paper-ink); font-weight: 650; }
+    details { scroll-margin-top: 24px; }
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 24px 0 0;
+      font-size: 1.06rem;
+      font-weight: 650;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border: 1px solid #afc2b4;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+    details[open] summary::after { content: "−"; }
+    .transcript { list-style: none; padding: 0; margin: 14px 0 0; }
+    .transcript li { display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid #dce0d5; }
+    .transcript li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .timestamp { padding-top: 3px; color: #557566; font-size: .83rem; font-variant-numeric: tabular-nums; }
+    .transcript h3 { margin: 0 0 8px; font-size: 1rem; font-weight: 650; }
+    .transcript p { max-width: 760px; color: var(--paper-muted); margin: 0; font-size: .97rem; }
+    .offer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 30px;
+      padding: 38px 2px;
+      border-bottom: 1px solid var(--line);
+    }
+    .offer h2 { margin: 0; font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 550; }
+    .offer p { color: var(--muted); max-width: 650px; margin: 12px 0 0; font-size: .97rem; }
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 7px;
+      background: var(--mint);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: .88rem;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .button:hover { background: #d9f7df; }
+    .cta-note { display: block; margin-top: 9px; color: var(--muted); font-size: .74rem; text-align: center; }
+    footer { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; padding: 25px 0 32px; font-size: .79rem; color: var(--muted); }
+    footer p { margin: 0; }
+    @media (max-width: 720px) {
+      .wrap { width: calc(100% - 36px); }
+      .site-header { padding-block: 21px; }
+      .hero { padding-top: 38px; }
+      .intro { font-size: 1rem; }
+      .player { border-radius: 12px; }
+      .player-top { padding: 12px 14px; font-size: .72rem; }
+      .paper { padding: 22px; border-radius: 16px; }
+      .demo-grid { grid-template-columns: 1fr; gap: 14px; }
+      .demo-card { padding: 20px; }
+      .offer { grid-template-columns: 1fr; gap: 22px; padding-block: 30px; }
+      .offer-action { justify-self: start; }
+      .transcript li { gap: 12px; grid-template-columns: 43px 1fr; }
+    }
+    @media (max-width: 380px) {
+      .wrap { width: calc(100% - 28px); }
+      .site-header { gap: 12px; }
+      .back-link { font-size: .8rem; }
+      .paper { padding: 18px; }
+      .player-top { align-items: flex-start; }
+      .player-label { max-width: 200px; }
+      .transcript li { grid-template-columns: 1fr; gap: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; color: black; }
+      .player, .video-support, .offer-action, .skip-link { display: none; }
+      .paper { border: 1px solid #ccc; }
+      .intro, .eyebrow, .back-link, .offer p, footer { color: #333; }
+      .wrap { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="wordmark">Fieldwork<span aria-hidden="true">.</span></div>
+      <a class="back-link" href="https://dhairyadevelops.github.io/">Dhairya’s portfolio <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">From brief to review</p>
+        <h1 id="page-title">A two-minute<br>illustrated walkthrough.</h1>
+        <p class="intro">See how Fieldwork makes delivery assumptions, team capacity and review decisions visible before work moves forward.</p>
+      </section>
+
+      <section aria-label="Fieldwork walkthrough video">
+        <div class="player">
+          <div class="player-top">
+            <span class="player-label">Planning lab + review dashboard</span>
+            <span class="runtime">02:00 / Illustrated demo</span>
+          </div>
+          <video controls preload="metadata" playsinline width="1920" height="1080"
+            src="./fieldwork-walkthrough.mp4" poster="./fieldwork-walkthrough-poster.jpg"
+            aria-label="Fieldwork: a two-minute illustrated walkthrough" aria-describedby="video-description">
+            Your browser cannot play this video. <a href="./fieldwork-walkthrough.mp4" download="fieldwork-walkthrough.mp4">Download the MP4</a> or read the transcript below.
+          </video>
+        </div>
+        <div class="video-support">
+          <p id="video-description">Published demo screenshots, explanatory graphics and a synthetic voice.</p>
+          <nav aria-label="Video resources">
+            <a href="./fieldwork-walkthrough.mp4" download="fieldwork-walkthrough.mp4">Download MP4 <span aria-hidden="true">↓</span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="paper" aria-label="Explore the demonstrations and transcript">
+        <p class="section-label">Explore the working demos</p>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <span class="card-number" aria-hidden="true">01 / PLAN</span>
+            <h2>Turn a brief into a reviewable plan.</h2>
+            <p>Inspect the workload assumptions, compare production and review effort with available time, and surface missing prerequisites.</p>
+            <a href="https://dhairyadevelops.github.io/ai-contributor-ops-demo/planner/index.html">Open the planning lab <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="demo-card">
+            <span class="card-number" aria-hidden="true">02 / REVIEW</span>
+            <h2>Give every review a clear next step.</h2>
+            <p>Explore reviewer assignment, required decision notes and status changes using a queue of fictional submissions.</p>
+            <a href="https://dhairyadevelops.github.io/ai-contributor-ops-demo/">Open the review dashboard <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="disclosure"><strong>An independent demonstration by Dhairya Sharma.</strong> The video is an illustrated walkthrough, not a live screen recording. It uses fictional data and synthetic narration, with AI-assisted development. The two demos are separate and use fixed rules; they have no production integrations. Changes stay in browser memory and disappear on refresh.</p>
+
+        <details id="transcript">
+          <summary>Read the full transcript</summary>
+          <ol class="transcript">
+            <li>
+              <span class="timestamp">0:00</span>
+              <div><h3>The problem</h3><p>A delivery brief can hide more work than a team can handle, or unclear review rules. Fieldwork makes these assumptions visible. This illustrated walkthrough uses screenshots from Dhairya’s independent portfolio demo.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">0:14</span>
+              <div><h3>An editable brief</h3><p>The planning lab starts with a fictional brief: item volume, time per item, review coverage and team availability. Each input is an editable assumption, making the estimate straightforward to inspect and question.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">0:29</span>
+              <div><h3>Capacity without hidden promises</h3><p>In this preset, estimated work is sixty-six hours against seventy-five available. Production and review share that capacity. Onboarding, pilot work, rework and coordination are excluded, so the difference is not guaranteed spare time.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">0:46</span>
+              <div><h3>Checks that match the plan</h3><p>Unconfirmed permissions or unclear acceptance rules remain blockers. The checklist records example review acknowledgements, not verified consent. Editing the brief clears those acknowledgements, preventing an outdated review from carrying over to a changed plan.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">1:01</span>
+              <div><h3>A clear review owner</h3><p>The separate review dashboard shows fictional submissions and their owners. A submission needs an assigned reviewer before review can start. Clear status rules describe what can happen next and what information is missing.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">1:15</span>
+              <div><h3>Explain each decision</h3><p>Acceptance and requests for changes both need a written note. The workflow supports another submission and review after changes. Accepted records become read-only, while session activity provides a visible account of those decisions.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">1:32</span>
+              <div><h3>What the demonstration proves</h3><p>Together, these demos show a planning handoff and an organized review queue. They use fixed rules and fictional data, with AI-assisted development. There are no live business connections, and browser changes disappear on refresh.</p></div>
+            </li>
+            <li>
+              <span class="timestamp">1:47</span>
+              <div><h3>A focused paid starting point</h3><p>Start with a paid review of one workflow: its steps, exceptions and acceptance checks. Dhairya can scope that review first, with any implementation priced separately after requirements and tests are agreed.</p></div>
+            </li>
+          </ol>
+        </details>
+      </section>
+
+      <section class="offer" aria-labelledby="offer-title">
+        <div>
+          <h2 id="offer-title">Start with one workflow.</h2>
+          <p>A paid review maps the steps, identifies exceptions and defines acceptance checks. Get a practical next-step plan; agree any implementation scope and price separately.</p>
+        </div>
+        <div class="offer-action">
+          <a class="button" href="https://www.linkedin.com/in/dhairyasharma23/">Discuss a paid review <span aria-hidden="true">↗</span></a>
+          <span class="cta-note">Connect with Dhairya on LinkedIn</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Fieldwork / An independent portfolio demonstration</p>
+      <a href="https://dhairyadevelops.github.io/">More work by Dhairya Sharma <span aria-hidden="true">↗</span></a>
+    </footer>
+  </div>
+</body>
+</html>
