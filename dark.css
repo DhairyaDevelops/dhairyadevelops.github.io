@@ -96,6 +96,10 @@ body { background: var(--page); }
 .example-verdict.meets { background: #263e2c; color: #cfedb3; border-color: #a7d47d; }
 #qa-finding,.next-step { color: #c2d2c7; }
 .sample-proof { color: #c2deac; text-decoration-color: #75906b; }
+.buyer-sample { background: #16241e; border-color: #6e8b61; }
+.buyer-sample p { color: #bfd0be; }
+.sample-downloads a { background: #243729; color: #e4efdd; border-color: #8dab78; }
+.sample-downloads a:hover { background: #354d30; }
 .website-capture { background: #10191c; border-color: #44564b; }
 .website-capture img { border-color: #647865; }
 .issue-row { background: #131f22; border-color: #556d5e; color: #d0dfd5; }

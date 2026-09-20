@@ -7,6 +7,7 @@ A lightweight, static portfolio connecting AI evaluation, data operations and pr
 - Professional introduction and experience summary grounded in Dhairya's supplied work history.
 - A three-service Delivery Lab: chatbot QA, responsive landing pages and technical SEO audits, each linked to the relevant existing Fiverr offer.
 - Interactive authored QA comparisons, genuine desktop/mobile screenshots and filterable fictional SEO findings.
+- A downloadable ShopDesk v2 QA sample: six-page PDF report and editable Excel scorecard, with ten fictional cases, a separate scoring contract and proposed acceptance checks. No live model or client work is represented.
 - A local-only brief builder with preview, copy, text download and stale-draft invalidation. Brief entries are not submitted or stored by the page.
 - Live links to Fieldwork, its Planning Lab, Fieldnote Studio and the Python LLM Evaluation Lab.
 - Actual project screenshots, not fabricated client work.
@@ -30,7 +31,7 @@ Run the dependency-free checks with `node --test services.test.mjs theme.test.cj
 
 ## Publishing
 
-GitHub Pages serves the `main` branch at the repository root. `.nojekyll` keeps the authored assets as static files. Upload only these eighteen reviewed files: `index.html`, `styles.css`, `dark.css`, `theme.js`, `theme.test.cjs`, `site.js`, `services.mjs`, `services.test.mjs`, `fieldwork.png`, `planning-lab.png`, `fieldnote.png`, `fieldnote-mobile.png`, `.nojekyll`, `.gitignore`, `fieldwork-walkthrough.html`, `fieldwork-walkthrough.mp4`, `fieldwork-walkthrough-poster.jpg` and this README.
+GitHub Pages serves the `main` branch at the repository root. `.nojekyll` keeps the authored assets as static files. Upload only these twenty reviewed files: `index.html`, `styles.css`, `dark.css`, `theme.js`, `theme.test.cjs`, `site.js`, `services.mjs`, `services.test.mjs`, `fieldwork.png`, `planning-lab.png`, `fieldnote.png`, `fieldnote-mobile.png`, `.nojekyll`, `.gitignore`, `fieldwork-walkthrough.html`, `fieldwork-walkthrough.mp4`, `fieldwork-walkthrough-poster.jpg`, `Chatbot_QA_Sample_Report.pdf`, `Chatbot_QA_Sample_Scorecard.xlsx` and this README.
 
 No analytics, form submissions, external fonts or paid services are implemented. The only stored preference is `dhairya-portfolio-theme` in localStorage. The brief's text remains in page memory until navigation/reload or reset; explicit copy writes to the user's clipboard and explicit download saves a local file. Clipboard failure exposes a manual-copy fallback. The host can log connection information; external links follow their destination's privacy practices. No private phone number, email address, home address or résumé is published. Client material must not be entered into examples; permission and an appropriate processing arrangement are required for real work.
 
